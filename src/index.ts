@@ -95,8 +95,9 @@ async function resolveBinary(
 	cargoToml: toml.JsonMap,
 	buildBinary: (binName: string) => Promise<void>
 ) {
-	let bin = cargoToml.bin instanceof Array
-		? (cargoToml.bin as toml.JsonMap[]).find((bin: toml.JsonMap) => bin.path === entrypointPath)
+	const entrypointPathRelative = path.relative(path.dirname(cargoTomlFile), entrypointPath);
+	const bin = cargoToml.bin instanceof Array
+		? (cargoToml.bin as toml.JsonMap[]).find((bin: toml.JsonMap) => bin.path === entrypointPathRelative)
 		: null;
 	let binName = bin && bin.name as string;
 
