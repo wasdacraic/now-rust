@@ -1,5 +1,7 @@
 # vercel-rust
 
+**Note:** this is a fork with [mike-engel/vercel-rust#25](https://github.com/mike-engel/vercel-rust/pull/25).
+
 > Community based builder for using rust on the Vercel platform
 
 ---
