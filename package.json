@@ -1,5 +1,5 @@
 {
-  "name": "vercel-rust",
+  "name": "@wasdacraic/now-rust",
   "description": "Community based builder for using rust on the Vercel platform",
   "version": "3.1.0",
   "license": "MIT",
